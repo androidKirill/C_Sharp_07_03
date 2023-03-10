@@ -1,28 +1,21 @@
-﻿// 3. Напишите программу, которая на вход принимает одно число
-//    (N), а на выходе показывает все целые числа в промежутке от -N до N.
+﻿// 1. Напишите программу, которая на вход принимает два числа и выдаёт,
+//    какое число большее, а какое меньшее.
 
-// --------------------------------------- вариант 1
+string s_n_1 = Console.ReadLine()!;
+string s_n_2 = Console.ReadLine()!;
 
-string s_N = Console.ReadLine()!;
-int N = int.Parse(s_N);
-int m = -N;
+int n_1 = int.Parse(s_n_1);
+int n_2 = int.Parse(s_n_2);
 
-while (m <= N)
+if (n_1 > n_2)
 {
-    Console.Write($"{m} ");
-    m += 1;
+    Console.Write($"The number {n_1} is greater than {n_2}");
 }
-
-
-// --------------------------------------- вариант 2
-
-int N = int.Parse(Console.ReadLine()!);
-int m = -N;
-
-while (m != N)
+else if (n_1 == n_2)
 {
-    Console.Write($"{m} ");
-    if (N > 0) m += 1;
-    else m -= 1;
+    Console.Write($"The number {n_1} is equal to the number {n_2}");
 }
-Console.Write($"{m} ");
+else
+{
+    Console.Write($"The number {n_2} is greater than {n_1}");
+}
