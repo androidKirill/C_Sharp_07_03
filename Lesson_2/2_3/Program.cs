@@ -19,3 +19,4 @@ void OneAndTwo(int num)
 
 int result = int.Parse(Console.ReadLine()!);
 OneAndTwo(result);
+
